@@ -1,0 +1,87 @@
+@import '../../scss/variables.scss';
+
+p {
+  margin: 0;
+}
+
+.currentPlayer {
+  display: flex;
+  gap: 10px;
+}
+
+.playerInfo {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1px;
+  gap: 10px;
+}
+
+.playerText {
+  margin: 0;
+  font-size: 24px;
+  color: $blue;
+}
+.playerScore {
+  font-size: 20px;
+  color: $blue;
+}
+
+.playerColor {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.playingButtons {
+  display: flex;
+  gap: 20px;
+}
+
+.colorPicker {
+  min-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.colorsContainer {
+  display: flex;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+}
+
+.color {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  list-style-type: none;
+}
+
+.smallMenuButton {
+  @include menuButton(76px, 76px);
+}
+
+.startButton {
+  @include menuButton(170px, 80px);
+  @include menuButtonImage('../../assets/buttons/start/default.png');
+}
+
+.startButton:hover {
+  @include menuButtonImage('../../assets/buttons/start/hover.png');
+}
+
+.gameModeButton {
+  @include menuButton(170px, 80px);
+}
+
+.pvpButton {
+  @include menuButtonImage('../../assets/buttons/mode/PvP.png');
+}
+
+.pveButton {
+  @include menuButtonImage('../../assets/buttons/mode/PvE.png');
+}

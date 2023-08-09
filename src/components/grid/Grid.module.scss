@@ -1,0 +1,28 @@
+.grid {
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(7, 60px);
+  gap: 21px;
+}
+
+.gridItems {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column-reverse;
+  padding-bottom: 25px;
+  gap: 25px;
+  align-items: center;
+}
+
+.fallingPosition {
+  position: absolute;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  top: -35px;
+  opacity: 0;
+}
+
+.gridItems:hover > .fallingPosition {
+  opacity: 1;
+}

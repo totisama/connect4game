@@ -1,0 +1,43 @@
+/* Colors */
+$blue: #0097E6;
+$gradient : linear-gradient(
+  135deg,
+  rgba(23, 234, 217, 1) 0%,
+  rgba(96, 120, 234, 1) 100%
+);
+
+/* Mixins */
+@mixin menu($justify: 'sa') {
+  width: 100%;
+  height: 110px;
+  display: flex;
+  align-items: center;
+
+  @if $justify == 'sa' {
+    justify-content: space-around;
+  }
+
+  @if $justify == 'sb' {
+    justify-content: space-between;
+  }
+}
+
+@mixin menuButton($width, $heigth) {
+  width: $width;
+  height: $heigth;
+  border-width: 0px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+@mixin menuButtonImage($imageUrl) {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-image: url($imageUrl);
+}
+
+@mixin finishText($size) {
+  color: white;
+  font-size: $size;
+  font-weight: 400;
+}

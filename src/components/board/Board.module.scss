@@ -1,0 +1,40 @@
+@import '../../scss/variables.scss';
+
+.game {
+  position: relative;
+  background-size: 650px 693px;
+  width: 650px;
+  height: 693px;
+  background-image: url(../../assets/board/background.png);
+}
+
+.mask {
+  position: absolute;
+  top: 40px;
+  left: 35px;
+  background-size: 580px 500px;
+  width: 580px;
+  height: 500px;
+  background-image: url(../../assets/board/mask.png);
+}
+
+.board {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  width: 300px;
+  height: 230px;
+}
+
+.initialMenu {
+  @include menu(sa);
+}
+
+.playingMenu {
+  @include menu(sb);
+  padding: 0px 25px;
+}

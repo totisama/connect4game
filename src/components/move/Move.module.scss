@@ -1,0 +1,39 @@
+.move {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  animation: fall-animation 1s ease-in-out;
+}
+
+.move:nth-child(1) {
+  --index: 0
+}
+
+.move:nth-child(2) {
+  --index: 1
+}
+
+.move:nth-child(3) {
+  --index: 2
+}
+
+.move:nth-child(4) {
+  --index: 3
+}
+
+.move:nth-child(5) {
+  --index: 4
+}
+
+.move:nth-child(6) {
+  --index: 5
+}
+
+@keyframes fall-animation {
+  from {
+      transform: translateY(calc(-425px + 75px * var(--index)));
+  }
+  to {
+      transform: translateY(0);
+  }
+}

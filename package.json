@@ -1,0 +1,74 @@
+{
+  "name": "connect4vite",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "test": "react-scripts test",
+    "coverage": "react-scripts test --coverage --reporters='jest-junit' --coverageDirectory='results/' --watchAll=false",
+    "lint": "eslint ./src --ext .js,.jsx,.ts,.tsx",
+    "lint:fix": "eslint --fix ./src --ext .js,.jsx,.ts,.tsx",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-router-dom": "^6.2.2",
+    "react-scripts": "5.0.0",
+    "sass": "^1.63.6"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^12.0.0",
+    "@testing-library/user-event": "^13.2.1",
+    "@types/jest": "^27.0.1",
+    "@types/node": "^16.7.13",
+    "@types/react": "^17.0.20",
+    "@types/react-dom": "^17.0.9",
+    "@typescript-eslint/eslint-plugin": "^5.61.0",
+    "@typescript-eslint/parser": "^5.61.0",
+    "@vitejs/plugin-react-swc": "^3.3.2",
+    "eslint": "^8.45.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.3",
+    "eslint-config-standard-with-typescript": "^36.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-n": "^15.7.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-react": "^7.32.2",
+    "jest-junit": "^13.2.0",
+    "typescript": "^4.9.5",
+    "vite": "^4.4.5"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "jest": {
+    "coverageReporters": [
+      "lcov",
+      [
+        "text",
+        {
+          "skipFull": true
+        }
+      ]
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
