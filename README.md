@@ -1,27 +1,37 @@
-# React + TypeScript + Vite
+# Find Four game
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The **Find-Four game** (a.k.a. [_The Captain's Mistress_ 🤯](http://www.lightlink.com/history/uk/products/027.html)) is
+a two-player connection board game, in which the players choose a color and then take turns dropping colored tokens into
+a **seven-column**, **six-row vertically** grid. The pieces fall straight down, occupying the lowest available space
+within the column. The objective of the game is to be the first to form a horizontal, vertical, or diagonal line of
+**four of one's own tokens**.
 
-Currently, two official plugins are available:
+## How it works?
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Our webapp will allow the user to start a new game by choosing between **playing alone** or **against another friend**.
+In case of playing alone, the machine will do random movements without taking care of how the board is or their chances
+to win.
 
-## Expanding the ESLint configuration
+The app will maintain the scorecard of the current user until the app is running or the game is reset by the user to
+start a new one.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+[Here](https://www.figma.com/file/85UIV2xTsgyUbNyhpgdy3m/GW-615-find-four-challenge) you
+would find the design of the application and see how it should look like once implemented.
 
-- Configure the top-level `parserOptions` property like this:
+Through [this Figma link (account required)](https://www.figma.com/file/85UIV2xTsgyUbNyhpgdy3m/GW-615-find-four-challenge) or through [this ZIP](https://static.rviewer.io/challenges/assets/find-four/assets.zip), you can download all the
+assets to start!
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+## Installation
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- Clone repository
+  `git clone https://github.com/totisama/connect4game`
+- Run the following commands
+  ```
+  cd connect4game
+  npm install
+  npm run dev
+  ```
+
+## License
+
+This project is licensed with the [MIT license](LICENSE).
